@@ -1,0 +1,123 @@
+.buttonStyle {
+  margin-left: 10px;
+  background-color: #0078d4 !important;
+  border-radius: 15px !important;
+  border: none !important;
+  color: white !important;
+}
+.impactContainer {
+  background-color: #f3f2f1;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.groupLabel {
+  font-weight: bold;
+}
+
+.asterisk {
+  color: rgba(255, 0, 0, 0.6);
+  font-weight: normal;
+}
+
+.choiceLabelContainer {
+  display: flex;
+  align-items: center;
+}
+
+.choiceLabelText {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.tooltipIcon {
+  font-size: 14px;
+  color: #0078d4;
+  display: flex;
+  align-self: center;
+}
+
+.choiceGroupContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.errorText {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 4px;
+  position: absolute;
+}
+.impactWrapContainer {
+  padding: 0 20px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.impactDetailContainer {
+  background-color: #dfdfdf;
+  padding: 10px 20px;
+  gap: 0.5rem;
+}
+
+.impactDetailTitleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.impactDetailTitle {
+  color: #5c5c5c;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.impactDetailValueContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.impactDetailDescription {
+  color: red;
+}
+.impactDetailValuePair {
+  display: flex;
+  padding: 10px;
+  margin: 5px 0px;
+  display: flex;
+  p {
+    text-align: center;
+  }
+}
+
+.impactLabelValue {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.impactLabelTooltip {
+  color: #3c3c3c;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.impactDetailStatus {
+  background-color: #0078d7;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 4px;
+}

@@ -1,0 +1,35 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.requiredLabel {
+  box-shadow: none;
+  margin: 0px;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  border-color: rgb(96, 94, 92);
+  position: relative;
+  outline: 0px;
+  user-select: none;
+}
+
+.requiredLabel::after {
+  content: " *";
+  color: red;
+  margin-left: 4px;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 4px;
+  position: absolute;
+}

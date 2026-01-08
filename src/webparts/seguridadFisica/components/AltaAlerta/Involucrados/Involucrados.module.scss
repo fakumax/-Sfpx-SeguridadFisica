@@ -1,0 +1,104 @@
+.gridContainer3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 10px;
+  padding-bottom: 20px;
+}
+.gridContainer4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 10px;
+  padding-bottom: 20px;
+}
+.gridContainer5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px 5px;
+  padding-bottom: 10px;
+}
+.gridContainer6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px 10px;
+  padding-bottom: 20px;
+}
+.gridContainer12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px 10px;
+  padding-bottom: 20px;
+}
+
+.dropdown,
+.textField,
+.datePicker,
+.choiceGroup {
+  width: 100%;
+}
+
+.dateTimeContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.requiredLabel {
+  box-shadow: none;
+  margin: 0px;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  font-family:
+    "Segoe UI",
+    "Segoe UI Web (West European)",
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  border-color: rgb(96, 94, 92);
+  position: relative;
+  outline: 0px;
+  user-select: none;
+}
+
+.orderField {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 4px;
+  position: absolute;
+}
+
+.errorTextFecha {
+  color: red;
+  font-size: 0.875em;
+  margin: 0px;
+  position: absolute;
+}
+
+.choiceLabelContainer {
+  display: flex;
+  align-items: center;
+}
+
+.buttonStyle {
+  background-color: #0078d4 !important; /* Azul de Fluent UI */
+  border-radius: 15px !important; /* Bordes redondeados */
+  border: none !important; /* Sin borde */
+  color: white !important; /* Texto blanco */
+  margin-left: 10px;
+}

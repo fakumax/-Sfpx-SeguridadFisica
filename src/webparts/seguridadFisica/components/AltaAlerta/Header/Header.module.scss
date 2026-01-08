@@ -1,0 +1,102 @@
+.headerTitle {
+  font-weight: 600;
+  color: #0078d4;
+  margin: 0;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.incidentInfoContainer {
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+
+.incidentInfoContainerMobile {
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+
+.incidentTopRow {
+  margin-bottom: 10px;
+}
+
+.incidentLabel {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.incidentNumber {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.status {
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.separator {
+  border-top: 1px solid #0078d4;
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.verticalSeparator {
+  border-left: 1px solid #0078d4;
+  height: 24px;
+  margin: 0 10px;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  label {
+    color: #767676;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.locationDetails {
+  margin-top: 10px;
+}
+
+.editLink {
+  display: flex;
+  align-items: center;
+  // color: #0078d4;
+  text-decoration: none;
+}
+
+.editLink .msIcon {
+  margin-right: 5px;
+}
+
+.editIcon {
+  margin-right: 5px;
+}
+
+.noMargin {
+  margin-left: 0px;
+}
+
+.mobile {
+  place-content: center;
+}
+
+.mobile label {
+  color: rgb(50, 49, 48);
+  font-size: 14px;
+}

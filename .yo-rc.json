@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "packageManager": "pnpm",
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "22.21.1",
+    "sdksVersions": {},
+    "version": "1.22.1", 
+    "libraryName": "shp-proyecto-ssff",
+    "libraryId": "4e3310ab-97b6-46b2-9d18-b60ac70de51f",
+    "environment": "spo",
+    "solutionName": "SHP-PROYECTO-SSFF",
+    "solutionShortDescription": "SHP-PROYECTO-SSFF description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

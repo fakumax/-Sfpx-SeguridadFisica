@@ -1,0 +1,70 @@
+.sectionTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.accordionButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e1e1e1;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  padding: 15px 0px 15px 18px;
+  text-align: left;
+}
+
+.accordionButton[aria-expanded="true"]:before,
+.accordionButton[aria-selected="true"]:before {
+  transform: rotate(45deg);
+}
+
+.accordionButton:before {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  content: "";
+  display: inline-block;
+  height: 10px;
+  margin-right: 12px;
+  transform: rotate(-45deg);
+  width: 10px;
+  color: #0078d4;
+}
+
+.accordion {
+  border: none;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.buttonStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #0078d4;
+  padding: 10px 10px;
+  margin-right: 20px;
+}
+
+.buttonStyle:hover {
+  background: none;
+}
+
+.buttonStyle:disabled {
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.buttonTextStyle {
+  color: black;
+  font-size: 14px;
+  margin-left: 5px;
+}

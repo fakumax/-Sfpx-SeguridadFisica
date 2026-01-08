@@ -1,0 +1,16 @@
+.ImagenesVideos {
+  &_buttonStyle {
+    background-color: #0078d4 !important; /* Azul de Fluent UI */
+    border-radius: 15px !important; /* Bordes redondeados */
+    border: none !important; /* Sin borde */
+    color: white !important; /* Texto blanco */
+    margin-left: 10px;
+  }
+  &_Caja {
+    width: 100%;
+  }
+}
+.errorText {
+  color: red;
+  font-size: 0.875em;
+}

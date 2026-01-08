@@ -1,0 +1,37 @@
+.descriptionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.descriptionText {
+  flex-grow: 1;
+}
+
+.buttonStyle {
+  margin-left: 10px;
+}
+/* DescripcionAlerta.module.scss */
+.buttonStyle {
+  background-color: #0078d4 !important; /* Azul de Fluent UI */
+  border-radius: 15px !important; /* Bordes redondeados */
+  border: none !important; /* Sin borde */
+  color: white !important; /* Texto blanco */
+}
+
+.descriptionText {
+  width: 100%;
+  display: flex;
+  margin: 5px 0;
+  background-color: #f3f2f1;
+  border-radius: 5px;
+  padding: 20px 20px;
+  overflow-wrap: anywhere;
+}
+.errorText {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 4px;
+  position: absolute;
+}

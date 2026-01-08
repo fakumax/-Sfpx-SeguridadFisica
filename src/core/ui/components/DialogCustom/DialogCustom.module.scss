@@ -1,0 +1,11 @@
+.DialogCustom {
+  .container {
+    background-color: white;
+  }
+}
+
+.requiredLabel::after {
+  content: " *";
+  color: red;
+  margin-left: 4px;
+}

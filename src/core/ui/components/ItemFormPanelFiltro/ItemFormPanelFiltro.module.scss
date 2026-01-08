@@ -1,0 +1,7 @@
+@import "../../scss/main.module.scss";
+
+.ItemFormPanelFiltro {
+  .input {
+    @include Input;
+  }
+}

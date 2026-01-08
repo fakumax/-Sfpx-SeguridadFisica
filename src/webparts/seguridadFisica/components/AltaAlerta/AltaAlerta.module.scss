@@ -1,0 +1,18 @@
+.rowButtons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.groupAccordion {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.groupAccordion .accordion {
+  border: none !important;
+}

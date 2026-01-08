@@ -1,0 +1,19 @@
+.tabs {
+	:global(.ms-Pivot-count) {
+		background-color: black;
+		padding: 2px;
+		width: 28px;
+		height: 22px;
+		display: flex;
+		align-items: center;
+		align-content: center;
+		color: #fff;
+		text-align: center;
+	}
+
+	:global(.ms-Pivot-linkContent) {
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+}

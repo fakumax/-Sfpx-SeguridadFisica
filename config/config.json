@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "seguridad-fisica-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/seguridadFisica/SeguridadFisicaWebPart.js",
+          "manifest": "./src/webparts/seguridadFisica/SeguridadFisicaWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SeguridadFisicaWebPartStrings": "lib/webparts/seguridadFisica/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

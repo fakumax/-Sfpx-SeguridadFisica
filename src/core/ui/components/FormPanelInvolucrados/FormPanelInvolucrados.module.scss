@@ -1,0 +1,73 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+
+.formPanel {
+  @include ms-Grid;
+
+  .row {
+    @include ms-Grid-row;
+    padding: 30px;
+
+    .column {
+      @include ms-Grid-col;
+      @include ms-sm12;
+      margin-bottom: 15px;
+    }
+  }
+
+  :global(.ms-Panel-main) {
+    width: 100% !important;
+
+    @include ms-screen-md-up {
+      width: 100% !important;
+    }
+
+    @include ms-screen-lg-up {
+      width: 80% !important;
+    }
+  }
+
+  :global(.ms-Panel-navigation) {
+    position: relative;
+    z-index: 200;
+  }
+
+  :global(.ms-Panel-commands) {
+    margin-top: 0;
+  }
+
+  :global(.ms-Panel-content) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  :global(.ms-Panel-footerInner) {
+    background-color: #fff;
+    position: relative;
+    z-index: 300;
+  }
+
+  :global(.ms-Panel-closeButton:hover),
+  :global(.ms-Panel-closeButton:active) {
+    background: none;
+  }
+
+  :global(.ms-Button-flexContainer) {
+    color: #fff;
+  }
+
+  :global(.ms-Button-label) {
+    margin: 13px 0;
+  }
+
+  .rightButton {
+    margin-left: 15px;
+
+    :global(.ms-Button-textContainer) {
+      color: $ms-color-neutralDark;
+    }
+  }
+}
+
+:global(.ms-Panel-footer) {
+  border-top: none !important;
+}

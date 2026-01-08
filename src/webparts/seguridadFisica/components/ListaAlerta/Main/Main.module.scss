@@ -1,0 +1,81 @@
+.main {
+  padding: 16px;
+  background-color: white;
+}
+
+.status {
+  padding: 1px 6px; // Reducir el padding en los costados
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tipoCell {
+  display: inline-block;
+  width: 30px; // Ancho fijo para asegurar el mismo tamaño
+  height: 20px; // Altura fija
+  line-height: 20px; // Centrar verticalmente el texto
+  text-align: center; // Centrar el texto horizontalmente
+  border-radius: 6px;
+}
+
+.tipoCellIncidente {
+  background-color: purple;
+  color: white;
+}
+
+.tipoCellControl {
+  background-color: #0078d4;
+  color: white;
+}
+
+.tipoCellPrevencion {
+  background-color: darkcyan;
+  color: white;
+}
+
+.tipoCellSinTipo {
+  background-color: rgb(255, 44, 44);
+  color: white;
+}
+
+.centeredCell {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.sinResultadosFlex {
+  display: flex;
+  height: 100%;
+}
+.sinResultadosIzq {
+  padding: 3rem;
+}
+.sinResultadosDer {
+  padding: 6rem 0rem;
+}
+.sinResultadosText1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.sinResultadosText2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ms-DetailsHeader-cellName,
+.ms-DetailsHeader-cellTitle,
+.centeredHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.flexInput {
+  width: 100%;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: stretch;
+}

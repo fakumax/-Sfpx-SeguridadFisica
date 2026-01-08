@@ -1,0 +1,39 @@
+.buttonStyle {
+  background-color: #0078d4 !important; /* Azul de Fluent UI */
+  border-radius: 15px !important; /* Bordes redondeados */
+  border: none !important; /* Sin borde */
+  color: white !important; /* Texto blanco */
+  margin-left: 10px;
+}
+.Caja {
+  width: 100%;
+  background-color: #ccf2fe;
+  padding: 20px;
+}
+
+.requiredLabel {
+  box-shadow: none;
+  margin: 0px;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  border-color: rgb(96, 94, 92);
+  position: relative;
+  outline: 0px;
+  user-select: none;
+}
+
+.requiredLabel::after {
+  content: " *";
+  color: red;
+  margin-left: 4px;
+}
+
+.margin10 {
+  margin: 10px 0px;
+}

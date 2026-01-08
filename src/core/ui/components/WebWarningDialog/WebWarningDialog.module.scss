@@ -1,0 +1,51 @@
+.WebWarningDialog {
+  :global(.ms-Dialog-main) {
+    width: 600px;
+    max-width: 700px;
+    .dialog_cabecera {
+      text-align: center;
+      margin: 0 0 10px 0;
+      i {
+        width: 55px;
+        height: 55px;
+        margin: 0 auto 10px;
+        border-radius: 50%;
+        line-height: 52px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 25px;
+      }
+      i[data-icon-name="StatusCircleExclamation"] {
+        font-size: 45px;
+      }
+      h1 {
+        font-size: 22px;
+        font-weight: 400;
+      }
+    }
+    .dialog {
+      &_divider {
+        margin: 20px 0;
+        color: #f0f0f0;
+      }
+      &_warning {
+        i {
+          background-color: red;
+        }
+        h1 {
+          color: red;
+        }
+        :global(.ms-Button.ms-Button--primary) {
+          background-color: red;
+        }
+        :global(.ms-Button.ms-Button--primary:hover) {
+          background-color: red;
+        }
+      }
+
+      &_descripcion {
+        margin: 20px 40px;
+      }
+    }
+  }
+}

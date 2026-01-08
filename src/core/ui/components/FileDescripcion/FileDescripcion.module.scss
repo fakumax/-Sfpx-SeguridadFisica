@@ -1,0 +1,41 @@
+.FileDescripcion {
+  &_Caja {
+    width: 100%;
+  }
+
+  &_buttonStyle {
+    color: red;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
+}
+
+.ImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  &_Icon {
+    width: 100%;
+    max-height: max-content;
+    padding: 0 2rem;
+  }
+}
+
+.ImgDescription {
+  width: 50%;
+}
+
+.GenericIcon {
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.875em;
+}

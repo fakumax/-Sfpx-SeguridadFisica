@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "demo-seguridadfisica-client-side-solution",
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [
+      {
+        "title": "demo-seguridadfisica Feature",
+        "description": "The feature that activates elements of the demo-seguridadfisica solution.",
+        "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/demo-seguridadfisica.sppkg"
+  }
+}

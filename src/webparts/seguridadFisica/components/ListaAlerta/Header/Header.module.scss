@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+  
+  .headerTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0078d4;
+    margin: 0;
+  }
+  
+  .headerTabs {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .commandBar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .ms-Pivot {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .ms-Pivot .ms-Pivot-link {
+    font-size: 14px;
+    color: #323130;
+  }
+  
+  .ms-Pivot .ms-Pivot-link.is-selected {
+    color: #0078d4;
+    font-weight: bold;
+    border-bottom: 2px solid #0078d4;
+  }
+  

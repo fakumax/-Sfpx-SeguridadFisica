@@ -1,0 +1,21 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.footer {
+	display: flex;
+	margin: 16px 0;
+	justify-content: flex-end;
+	.AppVersion {
+		display: inline-flex;
+
+		&_Icon {
+			@include ms-fontSize-16;
+		}
+
+		&_Txt {
+			font-style: italic;
+			font-size: 13px;
+			@include ms-fontWeight-regular;
+			margin: 0 4px;
+		}
+	}
+}

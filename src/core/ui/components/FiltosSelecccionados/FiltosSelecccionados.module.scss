@@ -1,0 +1,17 @@
+.FiltosSelecccionados {
+  &_centeredCell {
+    display: flex;
+    width: max-content;
+  }
+  &_Cell {
+    display: flex;
+    border: solid 1px silver;
+    margin: 5px;
+  }
+  &_CellFiltroTexto {
+    padding: 5px;
+  }
+  &_contenedorFiltro {
+    overflow: auto;
+  }
+}
