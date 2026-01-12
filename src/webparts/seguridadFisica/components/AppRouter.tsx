@@ -21,12 +21,22 @@ const AppRouter: React.FC<ISeguridadFisicaProps> = (props) => {
   const [stateMessageBar, setMessageBar] = React.useState<string>(undefined);
   const [userIsConnected, setUserIsConnected] = React.useState(props.VPNisConnected);
   const containerStyles: React.CSSProperties = { height: 300 };
+  const isMockMode = props.filtrosPermisos?.pendientes === 'mock';
+  
   React.useEffect(() => {
     if (props.visible) {
-      getListItemsAlerta(EstadoAlerta.pendientes);
+      if (isMockMode) {
+        // En modo mock, mostrar pendientes inicialmente
+        const pendientesEstados = ['Ingresada', 'Devuelta a COS'];
+        const filteredItems = props.listItemAlerta.filter(item => pendientesEstados.includes(item.Estado || ''));
+        setItems(filteredItems);
+      } else {
+        getListItemsAlerta(EstadoAlerta.pendientes);
+      }
     }
   }, []);
   React.useEffect(() => {
+    if (isMockMode) return;
     let fiveMinutes = 1000 * 60 * 5;
     const interval = setInterval(() => {
       let vpn = SPODataProvider.isConnected();
@@ -38,6 +48,23 @@ const AppRouter: React.FC<ISeguridadFisicaProps> = (props) => {
   }, []);
 
   const getListItemsAlerta = (PivotKey: string): void => {
+    // En modo mock, filtrar datos locales
+    if (isMockMode) {
+      const pendientesEstados = ['Ingresada', 'Devuelta a COS'];
+      const tratamientoEstados = ['Asignada', 'Derivada a Aprobador', 'En investigacion', 'Bloqueo en proceso', 'Asignada a Aprobador'];
+      
+      let filteredItems: IAlerta[] = [];
+      if (PivotKey === EstadoAlerta.pendientes) {
+        filteredItems = props.listItemAlerta.filter(item => pendientesEstados.includes(item.Estado || ''));
+      } else if (PivotKey === EstadoAlerta.tratamiento) {
+        filteredItems = props.listItemAlerta.filter(item => tratamientoEstados.includes(item.Estado || ''));
+      } else {
+        filteredItems = props.listItemAlerta;
+      }
+      setItems(filteredItems);
+      return;
+    }
+    
     let filtro = '';
     switch (PivotKey) {
       case EstadoAlerta.pendientes:
@@ -65,6 +92,14 @@ const AppRouter: React.FC<ISeguridadFisicaProps> = (props) => {
   };
   const handleDismiss = () => setMessageBar(undefined);
   const updateAlerta = (mensaje: string): void => {
+    if (isMockMode) {
+      if (mensaje != undefined) {
+        setMessageBar(mensaje);
+        setTimeout(() => handleDismiss(), 15000);
+      }
+      return;
+    }
+    
     let filtro = stateFiltro.pendientes;
     let listAlerta = SPODataProvider.getListItems<IAlerta>(
       LIST_NAMES.ALERTAS,

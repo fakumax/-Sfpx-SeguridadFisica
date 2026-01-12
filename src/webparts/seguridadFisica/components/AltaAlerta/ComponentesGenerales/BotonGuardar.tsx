@@ -57,7 +57,23 @@ const BotonGuardar: React.FC<BotonGuardarProps> = ({
   const novedadValue = watch('AlertaDatos.Novedad');
   const tipoAlertaValue = watch('TipoAlerta');
 
+  const isTratamiento = (estado?: string): boolean => {
+    return (
+      estado === Estados.DerivadaAprobador ||
+      estado === Estados.AsignadaAprobador ||
+      estado === Estados.Eninvestigacion ||
+      estado === Estados.Bloqueoproceso
+    );
+  };
+
   const getButtonText = () => {
+    if (
+      currentSectionIndex !== undefined &&
+      currentSectionIndex === 6 &&
+      isTratamiento(alertData?.Estado)
+    ) {
+      return `Continuar (${currentSectionIndex + 1}/${sections.length})`;
+    }
     if (currentSectionIndex !== undefined && currentSectionIndex === 6) {
       if (
         novedadValue === 'Alerta CON NOVEDAD' ||

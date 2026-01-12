@@ -69,6 +69,15 @@ const AltaAlerta: React.FC<AltaAlertaProps> = ({
   const { isDisabled, setIsDisabled, trigger, getValues, setValue, watch, setError } =
     useCustomFormContext();
 
+  const isTratamiento = (estado?: string): boolean => {
+    return (
+      estado === Estados.DerivadaAprobador ||
+      estado === Estados.AsignadaAprobador ||
+      estado === Estados.Eninvestigacion ||
+      estado === Estados.Bloqueoproceso
+    );
+  };
+
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [alertData, setAlertData] = React.useState<IAlerta | null>(null);
@@ -240,7 +249,13 @@ const AltaAlerta: React.FC<AltaAlertaProps> = ({
     }
     const initialSectionIndex =
       alertData && alertData.var_Seccion != null ? alertData.var_Seccion - 1 : 0;
-    setCurrentSectionIndex(Math.min(initialSectionIndex, sections.length - 1));
+
+    const effectiveSectionIndex =
+      alertData && isTratamiento(alertData.Estado)
+        ? sections.length - 1
+        : Math.min(initialSectionIndex, sections.length - 1);
+
+    setCurrentSectionIndex(effectiveSectionIndex);
     if (initialSectionIndex == 1 && alertData.Observaciones && alertData.EsMOB) {
       setIsSaved(true);
     }

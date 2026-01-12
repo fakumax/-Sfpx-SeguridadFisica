@@ -44,6 +44,24 @@ const PrimeraFila: React.FC<PrimeraFilaProps> = ({ alertData }) => {
           (title) => ({ key: title, text: title }),
         );
         setVicepresidencias(uniqueVPs);
+
+        // Inicializar UNs y Activos basándose en los datos de la alerta
+        if (alertData?.Vicepresidencia) {
+          const filteredUNs = data
+            .filter((item) => item.VP.Title === alertData.Vicepresidencia)
+            .map((item) => ({ key: item.UN.Id, text: item.UN.Title }));
+          const uniqueUNs = Array.from(
+            new Map(filteredUNs.map((item) => [item.key, item])).values(),
+          );
+          setUnidadesDeNegocio(uniqueUNs);
+
+          if (alertData?.UnidadDeNegocio?.Id) {
+            const filteredActivos = data
+              .filter((item) => item.UN.Id === alertData.UnidadDeNegocio.Id && item.VP.Title === alertData.Vicepresidencia)
+              .map((item) => ({ key: item.Id, text: item.Title }));
+            setActivos(filteredActivos);
+          }
+        }
       }
     };
     loadData();

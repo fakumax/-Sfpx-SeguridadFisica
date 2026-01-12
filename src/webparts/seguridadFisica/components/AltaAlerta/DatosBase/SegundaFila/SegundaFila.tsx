@@ -53,18 +53,20 @@ const SegundaFila: React.FC<SegundaFilaProps> = ({ alertData }) => {
 
   React.useEffect(() => {
     const loadData = async () => {
-      const [categoriasPrincipalesData, categoriasSecundariasData] = await Promise.all([
+      const [categoriasPrincipalesData, categoriasSecundariasData, tipoAlertaChoicesData] = await Promise.all([
         fetchCategoriasPrincipales(),
         fetchCategoriasSecundarias(),
+        fetchTipoAlertaChoices(),
       ]);
       setAllCategoriasPrincipales(categoriasPrincipalesData);
       setCategoriasSecundarias(categoriasSecundariasData);
+      setTipoAlertaChoices(tipoAlertaChoicesData);
 
       if (
         alertData?.TipoAlerta &&
         alertData.TipoAlerta.toLowerCase() !== AlertTypes.AlertaSinTipo
       ) {
-        const matchedOption = tipoAlertaChoices.find(
+        const matchedOption = tipoAlertaChoicesData.find(
           (choice) => choice.text.toLowerCase() === alertData.TipoAlerta.toLowerCase(),
         );
         if (matchedOption) {
@@ -92,7 +94,11 @@ const SegundaFila: React.FC<SegundaFilaProps> = ({ alertData }) => {
             },
             { shouldValidate: true },
           );
-          handleCategoriaPrincipalChange(alertData.CategoriaPrincipal.Id);
+          // Usar categoriasSecundariasData directamente en lugar del estado
+          const filtered = categoriasSecundariasData
+            .filter((sec) => sec.CategoriaPrincipal.Id === alertData.CategoriaPrincipal.Id)
+            .map((sec) => ({ key: sec.Id, text: sec.Title }));
+          setFilteredCategoriasSecundarias(filtered);
         }
 
         if (alertData.CategoriaSecundaria) {
