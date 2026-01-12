@@ -36,9 +36,10 @@ export default class SeguridadFisicaWebPart extends BaseClientSideWebPart<ISegur
   private _isOwner: boolean = false;
 
   protected async onInit(): Promise<void> {
-    const isLocalhost = this.context.isServedFromLocalhost;
+    // Modo DEMO: siempre usar datos mock (cambiar a false para conectar a SharePoint real)
+    const useMockMode = true;
     
-    if (isLocalhost) {
+    if (useMockMode) {
       // Modo mock para desarrollo local
       SPODataProvider.setMockMode(true);
       this._VPN = true;
